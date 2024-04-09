@@ -37,9 +37,13 @@ bin/**
 
 # Visualization
 dot/*.dot
+dot/*.png
 
 out/**
 
 # Try to keep the repo clean...
 test/temp/**
 config/verica_*.json
+
+include/**
+lib/**

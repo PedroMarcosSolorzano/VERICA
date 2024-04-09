@@ -46,7 +46,7 @@ LD_FULLTEST_FLAGS	:= -m64 -fopenmp -Wl,-rpath=$(LIBRARY_DIR) -D UNITTEST -D FULL
 LD_MERGETEST_FLAGS	:= -m64 -fopenmp -Wl,-rpath=$(LIBRARY_DIR) -D UNITTEST -D MERGETEST
 
 # EXTERNAL INCLUDES
-INCLUDES			:= -I $(INCLUDE_DIR) -I "/home/gitlab-runner/boost" -I "./inc/cudd"
+INCLUDES			:= -I $(INCLUDE_DIR) -I "./include"
 
 # LIBRARIES
 LIB_RELEASE			:= -lcudd -lboost_program_options
