@@ -1,0 +1,129 @@
+{
+    "general":
+    {
+        "verbose": 3,
+        "cores": 8,
+        "memory": 2,
+        "netlist":
+        {
+            "file": "case-studies/05-uc3m/simple-tests/and/and.v",
+            "name": "",
+            "module": "simple_AND"
+        },
+        "library":
+        {
+            "file": "cell/nang45.txt",
+            "name": "NANG45"
+        },
+        "filtering":
+        {
+            "sca":
+            {
+                "type": "none",
+                "whitelist": "model/sca-whitelist",
+                "blacklist": "model/sca-blacklist"
+            },
+            "fia":
+            {
+                "type": "none",
+                "whitelist": "model/fia-whitelist",
+                "blacklist": "model/fia-blacklist"
+            }
+        },
+
+        "annotation":
+        {
+            "file": "case-studies/05-uc3m/simple-tests/and/annotations.json",
+            "apply": true
+        },
+        "cudd":
+        {
+            "reordering": false
+        },
+        "visualization":
+        {
+            "enable": true,
+            "path": "dot/",
+            "full": true,
+            "partial": true
+        }
+    },
+
+    "side-channel":
+    {
+        "enable": false,
+        "configuration":
+        {
+            "order": 1,
+            "variate": 0,
+            "masking": 0,
+            "interrupt": false
+        },
+        "model":
+        {
+            "glitches": false,
+            "transitions": false,
+            "couplings": false
+        },
+        "analysis":
+        {
+            "uniformity": false,
+            "probing": false,
+            "p-ni": false,
+            "p-sni": false,
+            "pini": false
+        },
+        "vulnerability":
+        {
+            "enable" : false,
+            "unshare_outputs" : true,
+            "estimator" : false,
+            "runs" : 10000
+        }
+    },
+
+    "fault-injection":
+    {
+        "enable": true,
+        "configuration":
+        {
+            "number": 1,
+            "variate": 1,
+            "interrupt": false
+        },
+        "model":
+        {
+            "mapping": "model/setreset.txt",
+            "location": "cs"
+        },
+        "analysis":
+        {
+            "reduced_complexity": false,
+            "strategy": "correction",
+            "logic-level-error-flag": false,
+            "f-ni": true,
+            "f-sni": true,
+            "fini": true
+        },
+        "vulnerability":
+        {
+            "enable" : false,
+            "unshare_outputs" : true,
+            "estimator" : true,
+            "runs" : 10000
+        }
+    },
+
+    "combined":
+    {
+        "enable": false,
+        "analysis":
+        {
+            "c-ni": false,
+            "c-sni": true,
+            "ic-sni": false,
+            "cini": false,
+            "icini": false
+        }
+    }
+}
