@@ -13,8 +13,8 @@ module Combinational_DwC_AND ( port_in, port_out, port_error );
 
   wire [0:0] wire_dwc;
 
-  AND2_X1 U1 ( .A1(port_in[0]), .A2(port_in[1]), .ZN(port_out) );
-  AND2_X1 U2 ( .A1(port_in[0]), .A2(port_in[1]), .ZN(wire_dwc) );
+  AND2_X1 U0 ( .A1(port_in[0]), .A2(port_in[1]), .ZN(port_out) );
+  AND2_X1 U1 ( .A1(port_in[0]), .A2(port_in[1]), .ZN(wire_dwc) );
 
   Detection det0 ( .port_dwc_0(port_out), .port_dwc_1(wire_dwc), .port_dwc_error(port_error) );
 endmodule
