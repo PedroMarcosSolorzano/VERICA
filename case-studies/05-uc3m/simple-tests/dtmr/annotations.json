@@ -1,0 +1,54 @@
+{
+    "type":
+    {
+        "clock": ["clk"],
+        "refresh": [],
+        "control": [],
+        "error_flag": []
+    },
+    "primary_input_identifier":
+    {
+        "0": ["port_in[1:0]"]
+    },
+    "share_domain":
+    {
+        "input":
+        {
+            "0": ["port_in"]
+        },
+        "output":
+        {
+            "0": ["port_out"]
+        }
+    },
+    "share_index":
+    {
+        "input":
+        {
+            "0": ["port_in"]
+        },
+        "output":
+        {
+            "0": ["port_out"]
+        }
+    },
+    "fault_domain":
+    {
+        "input":
+        {
+            "0": ["port_in[0]"],
+            "1": ["port_in[1]"]
+        },
+        "output":
+        {
+            "0": ["port_out[0]"]
+        }
+    },
+    "secret_index":
+    {
+        "input":
+        {
+
+        }
+    }
+}
