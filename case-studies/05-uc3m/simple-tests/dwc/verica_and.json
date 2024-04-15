@@ -6,9 +6,9 @@
         "memory": 2,
         "netlist":
         {
-            "file": "case-studies/05-uc3m/simple-tests/dwc_and/dwc_and.v",
+            "file": "case-studies/05-uc3m/simple-tests/dwc/and.v",
             "name": "",
-            "module": "dwc_AND"
+            "module": "DwC_AND"
         },
         "library":
         {
@@ -33,7 +33,7 @@
 
         "annotation":
         {
-            "file": "case-studies/05-uc3m/simple-tests/dwc_and/annotations.json",
+            "file": "case-studies/05-uc3m/simple-tests/dwc/annotations.json",
             "apply": true
         },
         "cudd":

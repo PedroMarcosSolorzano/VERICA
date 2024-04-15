@@ -6,9 +6,9 @@
         "memory": 2,
         "netlist":
         {
-            "file": "case-studies/05-uc3m/simple-tests/and/and.v",
+            "file": "case-studies/05-uc3m/simple-tests/combinational_dwc/and.v",
             "name": "",
-            "module": "simple_AND"
+            "module": "Combinational_DwC_AND"
         },
         "library":
         {
@@ -33,7 +33,7 @@
 
         "annotation":
         {
-            "file": "case-studies/05-uc3m/simple-tests/and/annotations.json",
+            "file": "case-studies/05-uc3m/simple-tests/combinational_dwc/annotations.json",
             "apply": true
         },
         "cudd":
@@ -99,8 +99,8 @@
         "analysis":
         {
             "reduced_complexity": false,
-            "strategy": "correction",
-            "logic-level-error-flag": false,
+            "strategy": "detection",
+            "logic-level-error-flag": true,
             "f-ni": true,
             "f-sni": true,
             "fini": true
