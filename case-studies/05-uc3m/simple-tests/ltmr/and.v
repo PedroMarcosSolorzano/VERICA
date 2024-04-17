@@ -18,8 +18,9 @@ module Voter ( port_voter_in_0, port_voter_in_1, port_voter_in_2, port_voter_out
   NOR2_X1 U4 ( .A1(wire_4), .A2(wire_3), .ZN(port_voter_out) );
 endmodule
 
-module LTMR_AND ( port_in, port_out, clk );
-  input [1:0] port_in;
+module LTMR_AND ( port_in_0, port_in_1, port_out, clk );
+  input [0:0] port_in_0;
+  input [0:0] port_in_1;
   output [0:0] port_out;
   input clk;
 
@@ -28,7 +29,7 @@ module LTMR_AND ( port_in, port_out, clk );
   wire [0:0] wire_voter_1;
   wire [0:0] wire_voter_2;
 
-  AND2_X1 U0 ( .A1(port_in[0]), .A2(port_in[1]), .ZN(wire_reg) );
+  AND2_X1 U0 ( .A1(port_in_0), .A2(port_in_1), .ZN(wire_reg) );
 
   DFF_X1 reg0 ( .D(wire_reg), .CK(clk), .Q(wire_voter_0), .QN() );
   DFF_X1 reg1 ( .D(wire_reg), .CK(clk), .Q(wire_voter_1), .QN() );
