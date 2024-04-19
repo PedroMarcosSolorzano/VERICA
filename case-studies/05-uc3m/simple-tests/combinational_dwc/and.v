@@ -3,7 +3,7 @@ module Detection ( port_dwc_0, port_dwc_1, port_dwc_error );
   input [0:0] port_dwc_1;
   output [0:0] port_dwc_error;
 
-  XNOR2_X1 U0 ( .A(port_dwc_0), .B(port_dwc_1), .ZN(port_dwc_error) );
+  XOR2_X1 U0 ( .A(port_dwc_0), .B(port_dwc_1), .Z(port_dwc_error) );
 endmodule
 
 module Combinational_DwC_AND ( port_in_0, port_in_1, port_out, port_error );
