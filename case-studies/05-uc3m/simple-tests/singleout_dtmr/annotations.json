@@ -1,7 +1,7 @@
 {
     "type":
     {
-        "clock": ["clk_0", "clk_1", "clk_2"],
+        "clock": ["clk"],
         "refresh": [],
         "control": [],
         "error_flag": []
@@ -20,9 +20,7 @@
         },
         "output":
         {
-            "0": ["port_out_0"],
-            "1": ["port_out_1"],
-            "2": ["port_out_2"]
+            "0": ["port_out"]
         }
     },
     "share_index":
@@ -33,7 +31,7 @@
         },
         "output":
         {
-            "0": ["port_out_0", "port_out_1", "port_out_2"]
+            "0": ["port_out"]
         }
     },
     "fault_domain":
@@ -45,9 +43,7 @@
         },
         "output":
         {
-            "0": ["port_out_0[0]"],
-            "1": ["port_out_1[0]"],
-            "2": ["port_out_2[0]"]
+            "0": ["port_out[0]"]
         }
     },
     "secret_index":
