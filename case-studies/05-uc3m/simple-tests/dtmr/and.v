@@ -58,9 +58,13 @@ module Voter_2 ( port_voter_in_0, port_voter_in_1, port_voter_in_2, port_voter_o
   NOR2_X1 U4 ( .A1(wire_4), .A2(wire_3), .ZN(port_voter_out) );
 endmodule
 
-module DTMR_AND ( port_in_0, port_in_1, port_out_0, port_out_1, port_out_2, clk );
-  input [0:0] port_in_0;
-  input [0:0] port_in_1;
+module DTMR_AND ( port_in_0_0, port_in_0_1, port_in_0_2, port_in_1_0, port_in_1_1, port_in_1_2, port_out_0, port_out_1, port_out_2, clk );
+  input [0:0] port_in_0_0;
+  input [0:0] port_in_0_1;
+  input [0:0] port_in_0_2;
+  input [0:0] port_in_1_0;
+  input [0:0] port_in_1_1;
+  input [0:0] port_in_1_2;
   output [0:0] port_out_0;
   output [0:0] port_out_1;
   output [0:0] port_out_2;
@@ -73,9 +77,9 @@ module DTMR_AND ( port_in_0, port_in_1, port_out_0, port_out_1, port_out_2, clk 
   wire [0:0] wire_voter_1;
   wire [0:0] wire_voter_2;
 
-  AND2_X1 U0 ( .A1(port_in_0), .A2(port_in_1), .ZN(wire_reg_0) );
-  AND2_X1 U1 ( .A1(port_in_0), .A2(port_in_1), .ZN(wire_reg_1) );
-  AND2_X1 U2 ( .A1(port_in_0), .A2(port_in_1), .ZN(wire_reg_2) );
+  AND2_X1 U0 ( .A1(port_in_0_0), .A2(port_in_1_0), .ZN(wire_reg_0) );
+  AND2_X1 U1 ( .A1(port_in_0_1), .A2(port_in_1_1), .ZN(wire_reg_1) );
+  AND2_X1 U2 ( .A1(port_in_0_2), .A2(port_in_1_2), .ZN(wire_reg_2) );
 
   DFF_X1 reg0 ( .D(wire_reg_0), .CK(clk), .Q(wire_voter_0), .QN() );
   DFF_X1 reg1 ( .D(wire_reg_1), .CK(clk), .Q(wire_voter_1), .QN() );

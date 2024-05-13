@@ -15,23 +15,22 @@
     {
         "input":
         {
-            "0": ["port_in_0"],
-            "1": ["port_in_1"]
+
         },
         "output":
         {
-            "0": ["port_out"]
+
         }
     },
     "share_index":
     {
         "input":
         {
-            "0": ["port_in_0", "port_in_1"]
+
         },
         "output":
         {
-            "0": ["port_out"]
+
         }
     },
     "fault_domain":
