@@ -2,11 +2,11 @@
     "general":
     {
         "verbose": 3,
-        "cores": 8,
-        "memory": 2,
+        "cores": 1,
+        "memory": 1,
         "netlist":
         {
-            "file": "case-studies/05-uc3m/simple-tests/gtmr/and.v",
+            "file": "case-studies/05-uc3m/simple-tests/singleout_gtmr/and.v",
             "name": "",
             "module": "SingleOut_GTMR_AND"
         },
@@ -33,7 +33,7 @@
 
         "annotation":
         {
-            "file": "case-studies/05-uc3m/simple-tests/gtmr/annotations.json",
+            "file": "case-studies/05-uc3m/simple-tests/singleout_gtmr/annotations.json",
             "apply": true
         },
         "cudd":
