@@ -11,6 +11,7 @@ docs/html
 *.lo
 *.o
 *.obj
+build/
 
 # Code coverage measurement and report files
 coverage/**
@@ -47,3 +48,7 @@ config/verica_*.json
 
 include/**
 lib/**
+
+# External tools
+boost_*
+cudd-*

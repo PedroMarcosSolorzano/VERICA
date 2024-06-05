@@ -46,7 +46,7 @@ LD_FULLTEST_FLAGS	:= -m64 -fopenmp -Wl,-rpath=$(LIBRARY_DIR) -D UNITTEST -D FULL
 LD_MERGETEST_FLAGS	:= -m64 -fopenmp -Wl,-rpath=$(LIBRARY_DIR) -D UNITTEST -D MERGETEST
 
 # EXTERNAL INCLUDES
-INCLUDES			:= -I $(INCLUDE_DIR) -I "./include"
+INCLUDES			:= -I $(INCLUDE_DIR) -I "./boost_1_84_0" -I "./inc/cudd"
 
 # LIBRARIES
 LIB_RELEASE			:= -lcudd -lboost_program_options
